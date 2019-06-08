@@ -31,10 +31,36 @@
             <verbose>true</verbose>
         </configuration>
       </plugin>
-      
-      
+	  
+	  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.1.0</version>
+		<configuration>customcheckstyle.xml</configuration>
+      </plugin>
+	  
+	  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M3</version>
+		<configuration>
+		  <skipTests>false</skipTests>
+		</configuration>
+		
+      </plugin>
+           
     </plugins>
   </build>
+  
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>3.0.0</version>
+      </plugin>
+    </plugins>
+  </reporting>
   
   <dependencies>
     <dependency>

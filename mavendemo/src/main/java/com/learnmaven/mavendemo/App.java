@@ -7,8 +7,8 @@ package com.learnmaven.mavendemo;
 import org.apache.log4j.Logger;
 public class App 
 { 
-	final static Logger logger = Logger.getLogger(App.class);
-    public static void main( String[] args )
+  final static Logger logger = Logger.getLogger(App.class);
+    public static void main(String[] args)
     {   
     	Calculator calc = new Calculator();
     	logger.debug(calc.add(1, 2));
